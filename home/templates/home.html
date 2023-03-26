@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+ home
+{% comment %} <link rel ='stylesheet' href="{% static 'style.css' %}"> {% endcomment %} 
+{% endblock %}
+
+{% comment %} 
+{% block style %} {% endcomment %}
+
+{% comment %} <link rel ='stylesheet' href="{% static 'style.css' %}"> {% endcomment %}
+{% comment %} 
+<link rel="stylesheet" href="static/style.css"> 
+<style>
+    #hello{
+        color: red;
+   }
+</style> {% endcomment %}
+
+{% comment %} {% endblock %} {% endcomment %}
+
+{% block content %}
+Hello from home
+
+<a href ="https://cse.uap/">uap cse page</a>
+<br>
+<a href ="{% url 'about' %}">About</a>
+<br>
+<img id ="uap_logo" src ="{% static 'uap_logo.png' %}" alt="uap logo">
+<h1 id ='hello'> Hello</h1>
+<br>
+{% endblock %}
+
+

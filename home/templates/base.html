@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+   
+    <title>
+        {% block title%}
+
+            my site
+        {% endblock%}
+       
+    </title>
+    <link href="static/style.css" rel="stylesheet">
+
+   
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="#">to--do</a></li>
+        <li><a href="#">login</a></li>
+        {% block navbar %}
+        {% endblock%}
+      </ul>
+    </nav>
+    <h1>Welcome to my website!</h1>
+    <p>Here you will find all sorts of interesting content.</p>
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
